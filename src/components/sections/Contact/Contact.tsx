@@ -1,13 +1,12 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { sendEmail } from "@lib/actions";
-import { contactFormSchema, type ContactFormData } from "@lib/schema";
 import { Textarea } from "@nextui-org/input";
 import { useController, useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
-
 import Input from "./Input";
+import { sendEmail } from "@/lib/actions";
+import { contactFormSchema, type ContactFormData } from "@/lib/schema";
 
 export default function Contact() {
   const { control, handleSubmit, reset } = useForm<ContactFormData>({
