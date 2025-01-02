@@ -12,7 +12,6 @@ import {
 import { link as linkStyles } from "@nextui-org/theme";
 import clsx from "clsx";
 import NextLink from "next/link";
-
 import {
   DiscordIcon,
   GithubIcon,
@@ -21,7 +20,6 @@ import {
   TwitterIcon,
 } from "./icons";
 import { ThemeSwitch } from "./theme-switch";
-
 import { siteConfig } from "@/config/site";
 
 export const Navbar = () => {

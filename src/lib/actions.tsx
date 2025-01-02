@@ -3,7 +3,6 @@
 import { render } from "@react-email/components";
 import nodemailer from "nodemailer";
 import ContactEmail from "@components/emails/ContactEmail";
-
 import { type ContactFormData } from "./schema";
 
 export async function sendEmail(contactData: ContactFormData) {

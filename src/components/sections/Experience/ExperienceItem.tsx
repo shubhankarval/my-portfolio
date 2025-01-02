@@ -3,7 +3,6 @@
 import FadeUpOnScroll from "@components/common/FadeUpOnScroll";
 import { Chip } from "@nextui-org/chip";
 import { useRef } from "react";
-
 import Circe from "./CircleIcon";
 
 const skillsList = [

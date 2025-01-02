@@ -2,7 +2,6 @@
 
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
-
 import ExperienceItem from "./ExperienceItem";
 
 export default function Experience() {
