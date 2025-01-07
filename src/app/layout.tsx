@@ -46,12 +46,10 @@ export default function RootLayout({
               duration: 3000,
             }}
           />
-          <div className="relative flex h-screen flex-col">
-            <Navbar />
-            <main className="container mx-auto max-w-5xl grow px-6 pt-16">
-              {children}
-            </main>
-          </div>
+          <Navbar />
+          <main className="container mx-auto max-w-5xl px-6 md:px-14">
+            {children}
+          </main>
         </Providers>
       </body>
     </html>

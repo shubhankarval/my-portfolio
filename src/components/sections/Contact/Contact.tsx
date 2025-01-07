@@ -42,7 +42,7 @@ export default function Contact() {
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid grid-cols-2 gap-x-3 gap-y-5">
           {inputData.map((input, index) => (
             <Input
               key={input.name}

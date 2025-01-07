@@ -15,6 +15,16 @@
   ],
   "plugins": ["react", "import", "@typescript-eslint", "jsx-a11y", "prettier"],
   "parser": "@typescript-eslint/parser",
+  "overrides": [
+    {
+      "files": "*.mdx",
+      // "parser": "eslint-mdx", // enable `eslint-mdx` manually if it does not work
+      "extends": "plugin:mdx/recommended",
+      "rules": {
+        "no-unused-expressions": "off"
+      }
+    }
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true

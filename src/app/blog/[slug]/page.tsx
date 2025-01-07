@@ -12,5 +12,9 @@ export default async function Page({
   const slug = (await params).slug;
   const { default: Blog } = await import(`@/blogs/${slug}.mdx`);
 
-  return <Blog />;
+  return (
+    <div className="mx-auto px-5 md:max-w-xl lg:max-w-3xl">
+      <Blog />
+    </div>
+  );
 }
