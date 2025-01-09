@@ -11,14 +11,22 @@ export const Heading = ({ level, children }: HeadingProps) => {
 
   return (
     <HeadingTag
-      className={cn("font-semibold text-lg", {
+      className={cn("group relative font-semibold text-lg", {
         "text-3xl": level === 2,
         "text-2xl": level === 3,
         "text-xl": level === 4,
       })}
       id={sanitizeId(extractText(children))}
     >
-      <a href={`#${sanitizeId(extractText(children))}`}>{children}</a>
+      <a
+        className="flex items-center"
+        href={`#${sanitizeId(extractText(children))}`}
+      >
+        <span className="absolute -left-8 opacity-0 transition-opacity group-hover:opacity-30">
+          #
+        </span>
+        {children}
+      </a>
     </HeadingTag>
   );
 };
@@ -26,7 +34,7 @@ export const Heading = ({ level, children }: HeadingProps) => {
 const sanitizeId = (text: string) =>
   text
     .replace(/\s+/g, "-") // Replace spaces with dashes
-    .replace(/[^a-z0-9\-]/g, ""); // Remove all non-alphanumeric characters except dashes
+    .replace(/[^a-z0-9A-Z\-]/g, ""); // Remove all non-alphanumeric characters except dashes
 
 // Function to extract text from ReactNode
 const extractText = (node: React.ReactNode): string => {

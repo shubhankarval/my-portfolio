@@ -13,7 +13,7 @@ export default async function Page({
   const { default: Blog } = await import(`@/blogs/${slug}.mdx`);
 
   return (
-    <div className="mx-auto px-5 md:max-w-xl lg:max-w-3xl">
+    <div className="mx-auto px-5 pt-10 md:max-w-xl lg:max-w-3xl">
       <Blog />
     </div>
   );
