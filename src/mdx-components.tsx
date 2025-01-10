@@ -1,5 +1,6 @@
 import type { MDXComponents } from "mdx/types";
-import { Heading } from "@components/mdx/Heading";
+import Heading from "@components/mdx/Heading";
+import Code from "@components/mdx/Code";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -14,6 +15,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     p: ({ children }) => <p className="mb-3">{children}</p>,
     ol: ({ children }) => <p className="list-decimal">{children}</p>,
     ul: ({ children }) => <p className="list-disc">{children}</p>,
+    pre: (props) => <Code {...props}>{props.children}</Code>,
     ...components,
   };
 }

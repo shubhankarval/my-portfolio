@@ -3,5 +3,5 @@ interface DateProps {
 }
 
 export default function Date({ date }: DateProps) {
-  return <span className="text-gray-400">{date}</span>;
+  return <span className="text-gray-300">{date}</span>;
 }
